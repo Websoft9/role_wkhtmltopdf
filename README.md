@@ -1,59 +1,51 @@
-Ansible Role: xxx
+Ansible Role: wkhtmltopdf
 =========
 
-在CentOS或者Ubuntu服务器上安装和配置xxxx 或xxx
+本 Role 用于在PHP运行环境下安装 [wkhtmltopdf](https://wkhtmltopdf.org/)。
 
-Requirements
-------------
+## Requirements
 
-无特殊要求,此 role 需要 root 用户权限,可以在playbook全局加入 `become: yes`,或者如下调用 role:
+运行本 Role，请确认符合如下的必要条件：
 
-```
-- hosts: all
-  roles:
-    - role: role_xxx
-      become: yes
-```
-
-Role Variables
---------------
-
-下面列出了可用变量和默认值(请参见"defaults/main.yml"):
-
-```
+| **Items**      | **Details** |
+| ------------------| ------------------|
+| Operating system | CentOS7.x Ubuntu18.04 AmazonLinux |
+| Python 版本 | Python2  |
+| Python 组件 |    |
+| Runtime |  |
 
 
+## Related roles
+
+本 Role 在运行时需要确保已经运行：common。以下为例：
 
 ```
+roles:
+    - {role: role_common, tags: "role_common"}
+    - {role: role_wkhtmltopdf, tags: "role_wkhtmltopdf"}
+```
 
 
+## Variables
 
-Dependencies
-------------
+暂无
 
-None
-
-Example Playbook
-----------------
+## Example
 
 ```
-- hosts: all
+- name: wkhtmltopdf
+  hosts: all
   become: yes
+  become_method: sudo 
   vars_files:
-    - vars/main.yml
+    - vars/main.yml 
+
   roles:
-    - { role: role_xxx }
+    - { role: role_common }
+    - { role: role_wkhtmltopdf }
+    ...
 ```
 
-`vars/main.yml` :
-```
+## FAQ
 
-
-
-```
-
-License
--------
-
-BSD
 
