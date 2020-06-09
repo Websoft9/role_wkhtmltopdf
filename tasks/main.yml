@@ -2,7 +2,7 @@
 - block: 
   - name: install base fonts and Chinese fonts
     yum: 
-      name: [libXrender,libXext,xorg-x11-fonts-75dpi,xorg-x11-fonts-Type1]
+      name: [libXrender,libXext,xorg-x11-fonts-75dpi,xorg-x11-fonts-Type1,wqy*]
 
   - name: Install wkhtmltox
     yum:
