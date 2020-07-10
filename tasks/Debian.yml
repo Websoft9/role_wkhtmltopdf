@@ -5,4 +5,4 @@
 
 - name: Install wkhtmltopdf
   apt:
-    deb: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.{{ansible_lsb.codename}}_amd64.deb
+    deb: "{{wkhtmltopdf_ubuntu_download}}"
