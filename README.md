@@ -1,7 +1,7 @@
 Ansible Role: wkhtmltopdf
 =========
 
-本 Role 用于在PHP运行环境下安装 [wkhtmltopdf](https://wkhtmltopdf.org/)。
+This rols is install the [wkhtmltopdf](https://wkhtmltopdf.org/) and some Fonts
 
 ## Requirements
 
