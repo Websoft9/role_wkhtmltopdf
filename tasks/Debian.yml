@@ -1,1 +1,8 @@
+- name: install base fonts and Chinese fonts
+  apt: 
+    name: [libxrender1,libxext6,xfonts-75dpi,xfonts-base,ttf-wqy-zenhei,ttf-wqy-microhei]
+    force: yes
 
+- name: Install wkhtmltopdf
+  apt:
+    deb: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.{{ansible_lsb.codename}}_amd64.deb
