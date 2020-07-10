@@ -9,7 +9,7 @@ This rols is install the [wkhtmltopdf](https://wkhtmltopdf.org/) and some Fonts
 
 | **Items**      | **Details** |
 | ------------------| ------------------|
-| Operating system | CentOS7.x Ubuntu18.04 AmazonLinux |
+| Operating system | CentOS7.x Ubuntu16.04,18.04 AmazonLinux |
 | Python 版本 | Python2  |
 | Python 组件 |    |
 | Runtime |  |
