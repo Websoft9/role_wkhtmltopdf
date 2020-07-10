@@ -1,14 +1,14 @@
 
-- name: install base fonts and Chinese fonts
+- name: Install base fonts and Chinese fonts
   yum: 
     name: [libXrender,libXext,xorg-x11-fonts-75dpi,xorg-x11-fonts-Type1,wqy*]
 
 - name: Install wkhtmltopdf on {{ansible_distribution}}
   yum:
     name: "{{wkhtmltopdf_centos_download}}"
-  when: ansible_distribution == CentOS
+  when: ansible_distribution == "CentOS"
   
 - name: Install wkhtmltopdf on {{ansible_distribution}}
   yum:
     name: "{{wkhtmltopdf_amazonlinux_download}}"
-  when: ansible_distribution == Amazon
+  when: ansible_distribution == "Amazon"
