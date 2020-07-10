@@ -1,29 +1,9 @@
 ---
-- block: 
-  - name: install base fonts and Chinese fonts
-    yum: 
-      name: [libXrender,libXext,xorg-x11-fonts-75dpi,xorg-x11-fonts-Type1,wqy*]
+#1 install wkhtmltopdf by OS_family
+- name: Install this role on {{ansible_os_family}}
+  include: "{{ansible_os_family}}.yml"
 
-  - name: Install wkhtmltopdf
-    yum:
-      name: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox-0.12.5-1.centos{{ansible_distribution_major_version}}.x86_64.rpm
-
-  when: ansible_os_family == 'RedHat'
-
-
-- block: 
-  - name: install base fonts and Chinese fonts
-    apt: 
-      name: [libxrender1,libxext6,xfonts-75dpi,xfonts-base,ttf-wqy-zenhei,ttf-wqy-microhei]
-      force: yes
-
-  - name: Install wkhtmltopdf
-    apt:
-      deb: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.{{ansible_lsb.codename}}_amd64.deb
-
-  when: ansible_os_family == 'Debian'
-
-
+#2 configure wkhtmltopdf
 - name: wkhtmltox symbolic link
   file:
     src: /usr/local/bin/{{item}}
