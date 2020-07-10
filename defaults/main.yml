@@ -1,5 +1,5 @@
 # download URL from: https://wkhtmltopdf.org/downloads.html
 # only support centos and ubuntu
 wkhtmltopdf_centos_download: "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos{{ansible_distribution_major_version}}.x86_64.rpm"
-wkhtmltopdf_ubuntu_download: "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.$(lsb_release -cs)_amd64.deb"
+wkhtmltopdf_ubuntu_download: "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.{{ansible_distribution_release}}_amd64.deb"
 wkhtmltopdf_amazonlinux_download: "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.amazonlinux2.x86_64.rpm"
