@@ -1,1 +1,8 @@
 
+- name: install base fonts and Chinese fonts
+  yum: 
+    name: [libXrender,libXext,xorg-x11-fonts-75dpi,xorg-x11-fonts-Type1,wqy*]
+
+- name: Install wkhtmltopdf
+  yum:
+    name: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox-0.12.5-1.centos{{ansible_distribution_major_version}}.x86_64.rpm
